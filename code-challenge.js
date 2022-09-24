@@ -6,19 +6,27 @@ const newSneakers = (sneakers) => {
 };
 
 const isThatMichaelJordan = (name) => {
-  // insert code
+  if(name.toLowerCase() == "michael jordan")
+    return true;
+  else
+    return false;
 };
 
 const areYouM = (name) => {
-  // insert code
+  if(name[0].toLowerCase() == 'm')
+    return true;
+  return false;
 };
 
 const mostViewsThreeSneakers = (sneakerOneViews, sneakerTwoViews, sneakerThreeViews) => {
-  // insert code
+  a = [shoe1,shoe2,shoe3]
+  a.sort();
+  return a[2];
 };
 
 const mostViews = (sneakerViews) => {
-  // insert code
+  arr.sort();
+  return arr[arr.length-1]
 };
 
 const validateEmail = (email) => {
