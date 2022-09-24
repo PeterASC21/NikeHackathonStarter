@@ -30,11 +30,32 @@ const mostViews = (sneakerViews) => {
 };
 
 const validateEmail = (email) => {
-  // insert code
+  if (email.includes("@"))
+   b = email[email.length-4] + email[email.length-3] + email[email.length-2] + email[email.length-1];
+  console.log(b)
+    if (b == ".com" || b == ".edu"|| b == ".net"|| b == ".org")
+      if (email[0]!='@')
+        return true
+  return false
 };
 
 const validateEmailWithError = (email) => {
-  // insert code
+  if (email.includes("@"))
+  {
+    b = email[email.length-4] + email[email.length-3] + email[email.length-2] + email[email.length-1];
+    if (b == ".com" || b == ".edu"|| b == ".net"|| b == ".org")
+    {
+      if (email[0]!='@')
+        return true
+      else
+        console.log("Invalid email: missing recipient name")
+    }
+    else
+      console.log("Invalid email: email address should end with .com, .edu, .net, or .org")
+  }
+  else
+        console.log("Invalid Email: Missing @ symbol")
+  return false
 };
 
 const getInitials = (name) => {
